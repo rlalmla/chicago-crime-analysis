@@ -1,0 +1,13 @@
+
+PCA Optimal Solution Summary
+----------------------------
+Total Variance: 75.01%
+PC1: 58.72%
+PC2: 16.29
+
+Input Features: 9
+
+Top Features:
+1. Day_Pattern
+2. Activity_Level
+3. Time_OfDay

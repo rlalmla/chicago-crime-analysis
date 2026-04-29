@@ -1,0 +1,28 @@
+Column,Description,Type
+ID,Unique identifier for the record,int64
+Case Number,Case number assigned to the crime,object
+Date,Date and time when the incident occurred,datetime64[ns]
+Block,Partially redacted address of the crime,object
+IUCR,Illinois Uniform Crime Reporting code,object
+Primary Type,Primary description of the crime,object
+Description,Detailed description of the crime,object
+Location Description,Description of the location where crime occurred,object
+Arrest,Whether an arrest was made,bool
+Domestic,Whether the crime was domestic-related,bool
+Beat,Police beat where crime occurred,int16
+District,Police district where crime occurred,int8
+Ward,City ward where crime occurred,int32
+Community Area,Community area where crime occurred,int32
+FBI Code,FBI crime classification code,object
+X Coordinate,X coordinate (Illinois State Plane),float64
+Y Coordinate,Y coordinate (Illinois State Plane),float64
+Year,Year the crime occurred,int16
+Updated On,Date the record was last updated,datetime64[ns]
+Latitude,Latitude coordinate,float64
+Longitude,Longitude coordinate,float64
+Location,"Location in (latitude, longitude) format",object
+Month,Month extracted from Date,int8
+Day,Day of month extracted from Date,int8
+Hour,Hour of day extracted from Date,int8
+DayOfWeek,"Day of week (0=Monday, 6=Sunday)",int8
+DayName,"Name of the day (Monday, Tuesday, etc.)",object

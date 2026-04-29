@@ -1,0 +1,16 @@
+creation_timestamp: 1777366085157
+current_stage: Staging
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1777366085225
+model_id: m-77be2d1da2924e3ab3671fdeb22f074e
+name: ChicagoCrimePCA
+run_id: 7bc1401ab4344f569a32a470190ad11b
+run_link: null
+source: models:/m-77be2d1da2924e3ab3671fdeb22f074e
+status: READY
+status_message: null
+storage_location: file:///c:/Users/nlalr/Desktop/Rama/PatrollQ_Project/Data_prep/../mlruns/318974576114999841/models/m-77be2d1da2924e3ab3671fdeb22f074e/artifacts
+user_id: null
+version: 2
+workspace: default

@@ -1,0 +1,15 @@
+artifact_path: file:///c:/Users/nlalr/Desktop/Rama/PatrollQ_Project/Data_prep/../mlruns/318974576114999841/models/m-7a9a1cbfad594479a42d3b3e29872944/artifacts
+flavors:
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.10.1
+model_id: m-7a9a1cbfad594479a42d3b3e29872944
+model_size_bytes: 4116
+model_uuid: m-7a9a1cbfad594479a42d3b3e29872944
+prompts: null
+run_id: c6c38cb96ef34202bb9987a840c72d9a
+utc_time_created: '2026-04-28 08:47:57.778483'

@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/nlalr/Desktop/Rama/PatrollQ_Project/Data_prep/../mlruns/318974576114999841/ea402efe54124f2ea19861ed235d9b14/artifacts
+end_time: 1777365642084
+entry_point_name: ''
+experiment_id: '318974576114999841'
+lifecycle_stage: active
+run_id: ea402efe54124f2ea19861ed235d9b14
+run_name: PCA_baseline_no_aggregation
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777365633041
+status: 3
+tags: []
+user_id: nlalr

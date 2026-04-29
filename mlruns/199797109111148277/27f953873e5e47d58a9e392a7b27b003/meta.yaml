@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/nlalr/Desktop/Rama/PatrollQ_Project/Data_prep/../mlruns/199797109111148277/27f953873e5e47d58a9e392a7b27b003/artifacts
+end_time: 1777363756528
+entry_point_name: ''
+experiment_id: '199797109111148277'
+lifecycle_stage: active
+run_id: 27f953873e5e47d58a9e392a7b27b003
+run_name: respected-worm-357
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777363756451
+status: 3
+tags: []
+user_id: nlalr

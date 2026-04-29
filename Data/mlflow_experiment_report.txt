@@ -1,0 +1,27 @@
+
+MLflow Experiment Tracking Report
+==================================
+Date: 2026-04-28 14:18:04
+Experiment: Dimensionality Reduction
+
+Best Model:
+-----------
+- Components: 3
+- Feature Engineering: aggregated
+- Variance Explained: 82.22% if best_variance else "N/A"
+
+Total Runs Tracked:
+-------------------
+9
+
+Key Insights:
+-------------
+- Feature aggregation significantly reduces dimensionality
+- PCA provides optimal linear reduction
+- MLflow ensures reproducibility and tracking
+
+Next Steps:
+-----------
+1. Use PCA features for classification models
+2. Track ML models using MLflow
+3. Register best model in MLflow Registry

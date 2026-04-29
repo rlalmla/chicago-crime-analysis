@@ -1,0 +1,7 @@
+artifact_location: file:///c:/Users/nlalr/Desktop/Rama/PatrollQ_Project/Data_prep/../mlruns/559195706272594805
+creation_time: 1777364380068
+experiment_id: '559195706272594805'
+last_update_time: 1777364380068
+lifecycle_stage: active
+name: 'Experiment 1: OPTIMAL PCA (2 Components, Aggregated Features)'
+workspace: default

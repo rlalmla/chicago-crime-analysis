@@ -1,0 +1,24 @@
+{
+  "project": "Chicago Crime Analysis",
+  "experiment_name": "Chicago_Crime_Clustering",
+  "total_runs": 6,
+  "best_geographic_model": {
+    "algorithm": "K-Means",
+    "run_id": "sample_run_id",
+    "silhouette_score": 0.4521,
+    "davies_bouldin_index": 1.23,
+    "n_clusters": 5
+  },
+  "temporal_patterns": {
+    "n_patterns": 4
+  },
+  "dimensionality_reduction": {
+    "pca_components": 3,
+    "tsne_components": 2
+  },
+  "dataset": {
+    "size": "496k records",
+    "date_range": "2023-2025",
+    "features": 31
+  }
+}

@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/nlalr/Desktop/Rama/PatrollQ_Project/Data_prep/../mlruns/199797109111148277/4b44389f6a004ce79c706de97626a877/artifacts
+end_time: 1777366051115
+entry_point_name: ''
+experiment_id: '199797109111148277'
+lifecycle_stage: active
+run_id: 4b44389f6a004ce79c706de97626a877
+run_name: luminous-rat-104
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777366051028
+status: 3
+tags: []
+user_id: nlalr

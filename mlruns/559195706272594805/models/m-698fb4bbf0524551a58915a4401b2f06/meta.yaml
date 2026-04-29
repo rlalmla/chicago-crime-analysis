@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/nlalr/Desktop/Rama/PatrollQ_Project/Data_prep/../mlruns/559195706272594805/models/m-698fb4bbf0524551a58915a4401b2f06/artifacts
+creation_timestamp: 1777364380831
+experiment_id: '559195706272594805'
+last_updated_timestamp: 1777364389402
+model_id: m-698fb4bbf0524551a58915a4401b2f06
+model_type: null
+name: pca_model
+source_run_id: 50621fc8fab9480fa896300e0a085441
+status: 2
+status_message: null

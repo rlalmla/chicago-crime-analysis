@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/nlalr/Desktop/Rama/PatrollQ_Project/Data_prep/../mlruns/156002204685002783/226acdbb518c4901acbdccefe7ad6d69/artifacts
+end_time: 1777364501969
+entry_point_name: ''
+experiment_id: '156002204685002783'
+lifecycle_stage: active
+run_id: 226acdbb518c4901acbdccefe7ad6d69
+run_name: PCA_Fast
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777364499768
+status: 3
+tags: []
+user_id: nlalr

@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/nlalr/Desktop/Rama/PatrollQ_Project/Data_prep/../mlruns/318974576114999841/94f93afa110c4393a4083ed0e70bd184/artifacts
+end_time: 1777364066117
+entry_point_name: ''
+experiment_id: '318974576114999841'
+lifecycle_stage: active
+run_id: 94f93afa110c4393a4083ed0e70bd184
+run_name: PCA_Optimal_2Components_Aggregated
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777364057397
+status: 3
+tags: []
+user_id: nlalr
