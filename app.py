@@ -64,7 +64,7 @@ def load_crime_data():
     try:
         url = "https://drive.google.com/uc?id=1WWs8zcQtV6AdKJrISgBk228qvI_pgarJ"
         df = pd.read_csv(url)
-        df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
+        st.write("Columns in dataset:", df.columns.tolist())  # 👈 ADD THIS
         return df
     except Exception as e:
         st.error(f"❌ Failed to load data: {e}")
