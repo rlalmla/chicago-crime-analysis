@@ -61,27 +61,31 @@ st.markdown("""
 # ============================================================================
 @st.cache_data
 def load_crime_data():
-    """Load main crime dataset"""
     try:
-        df = pd.read_csv('Data/chicago_crime_with_features.csv')
+        url = "https://drive.google.com/uc?id=1WWs8zcQtV6AdKJrISgBk228qvI_pgarJ"
+        df = pd.read_csv(url)
         df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
         return df
-    except FileNotFoundError:
-        st.error("❌ Data file not found: Data/chicago_crime_with_features.csv")
+    except Exception as e:
+        st.error(f"❌ Failed to load data: {e}")
         return None
-
+    
 @st.cache_data
 def load_clustering_results():
     try:
-        kmeans = pd.read_csv('Data/clustering_results.csv')
-        dbscan = pd.read_csv('Data/crime_dbscan_clustered.csv')
+        kmeans_url = "https://drive.google.com/uc?id=1X7ckBqZO304JiBFpsFJkiukT9g1zFwiA"
+        dbscan_url = "https://drive.google.com/uc?id=1nFJu7Sl_iSLACyai22BfE66LoG9-YJrw"
 
-        # ✅ FIX: unify column names
+        kmeans = pd.read_csv(kmeans_url)
+        dbscan = pd.read_csv(dbscan_url)
+
         if 'DBSCAN_Cluster' in dbscan.columns:
             dbscan.rename(columns={'DBSCAN_Cluster': 'Cluster'}, inplace=True)
 
         return kmeans, dbscan
-    except:
+
+    except Exception as e:
+        st.warning(f"⚠️ Clustering load failed: {e}")
         return None, None
 
 @st.cache_data
