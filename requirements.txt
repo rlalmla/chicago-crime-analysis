@@ -8,3 +8,4 @@ joblib
 plotly
 folium
 streamlit-folium
+mlflow
