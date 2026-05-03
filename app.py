@@ -258,9 +258,9 @@ if 'Arrest' in df.columns:
         df_filtered = df_filtered[df_filtered['Arrest'] == False]
 
 # ================= TABS =================
-tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "📊 Overview", "🗺️ Geographic Analysis", "⏰ Temporal Patterns", "🔍 Clustering Analysis", "📈 Insights & Trends"
-])
+tab1, tab2, tab3, tab4, tab5,tab6 = st.tabs([
+    "📊 Overview", "🗺️ Geographic Analysis", "⏰ Temporal Patterns", "🔍 Clustering Analysis", "📈 Insights & Trends",
+    "🧠 Dimensionality Reduction"])
 
 # ================= TAB 1: OVERVIEW =================
 with tab1:
@@ -894,6 +894,25 @@ with tab5:
     col3.metric("Missing Districts", f"{missing_district:,}")
     col4.metric("Data Completeness", f"{complete_pct:.1f}%")
 
+    st.markdown("---")
+    st.markdown("### 🔬 Clustering Model Evaluation")
+
+    st.write("""
+        Three clustering algorithms were implemented and evaluated:
+
+        - **K-Means**: Efficient and scalable, used for primary clustering
+        - **DBSCAN**: Identifies dense crime hotspots and filters noise
+        - **Hierarchical Clustering (Ward linkage)**: Used to analyze nested relationships between crime locations
+
+        **Evaluation Results:**
+        - Hierarchical clustering achieved a silhouette score of ~0.31
+        - This indicates weaker cluster separation compared to other models
+        - Therefore, K-Means and DBSCAN were selected for deployment
+        """)
+
+    st.metric("Hierarchical Clustering Silhouette Score", "0.317")
+    st.metric("Optimal Clusters Identified", "9")
+
 # ================= FOOTER =================
 st.markdown("---")
 st.markdown("""
@@ -903,3 +922,34 @@ st.markdown("""
         <p style='font-size: 0.9rem;'>Data Source: City of Chicago Data Portal | Updated Regularly</p>
     </div>
 """, unsafe_allow_html=True)
+
+with tab6:
+    st.header("📉 Dimensionality Reduction Analysis")
+
+    st.markdown("### 🔍 Overview")
+
+    st.write("""
+        - PCA (Principal Component Analysis) was used to reduce high-dimensional crime features
+        - Original features were aggregated using domain knowledge (27 → 9 meaningful features)
+        - PCA further reduced features to 7 components while retaining 73.9% variance
+        - t-SNE was applied to visualize complex crime patterns in 2D space
+        """)
+    
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.metric("PCA Components", "7")
+
+    with col2:
+        st.metric("Variance Retained", "73.9%")
+    
+    st.markdown("### 📊 PCA Insights")
+    st.write("""
+        - The scree plot shows diminishing variance contribution after initial components
+        - 7 components capture over 70% of total variance
+        - Most important features include spatial and location-based attributes
+        """)
+    st.markdown("### 🧠 t-SNE Visualization")
+
+    st.image("Data/tsne_crime_types.png",
+         caption="t-SNE Visualization showing clustering patterns across different crime types")
