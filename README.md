@@ -1,32 +1,57 @@
-# 🚓 Chicago Crime Analysis & Clustering Project
+# 🚓 Chicago Crime Intelligence Platform
 
-## 📌 Overview
+An interactive data science project that analyzes ~500,000 real-world crime records to uncover **spatial, temporal, and behavioral crime patterns** using clustering and dimensionality reduction techniques.
 
-This project presents an end-to-end data science pipeline for analyzing crime patterns in Chicago using machine learning techniques. It includes data preprocessing, feature engineering, clustering, dimensionality reduction, MLflow experiment tracking, and deployment via a Streamlit dashboard.
+👉 **Live Application:**
+https://chicago-crime-analysis-jatjuq9fu8kdjydgr2qkmh.streamlit.app/
+
+---
+
+## 📸 Application Preview
+
+### 🔹 Dashboard Overview
+<img width="1919" height="875" alt="Screenshot 2026-05-03 194329" src="https://github.com/user-attachments/assets/92b67b6b-1f52-49ab-9997-c732ce864a2f" />
+
+
+### 🔹 Clustering Visualization
+<img width="1913" height="866" alt="Screenshot 2026-05-03 194420" src="https://github.com/user-attachments/assets/0530da8c-b6a9-4446-901d-c78c1ec9c226" />
+
+
+### 🔹 Dimensionality Reduction (PCA / t-SNE)
+<img width="1915" height="865" alt="Screenshot 2026-05-03 194539" src="https://github.com/user-attachments/assets/3fbf800e-352f-43ff-b0c7-0e5454e6f6a6" />
 
 ---
 
 ## 🎯 Objectives
 
-* Analyze crime distribution across time and geography
-* Identify hidden patterns using clustering algorithms
-* Reduce dimensionality for visualization
-* Track experiments using MLflow
-* Build an interactive dashboard for insights
+* Analyze crime distribution across **time and geography**
+* Identify hidden patterns using **unsupervised learning**
+* Reduce high-dimensional data for **visual interpretation**
+* Track experiments using **MLflow**
+* Build an **interactive dashboard** for real-time insights
+
+---
+
+## 🔍 Key Insights
+
+* High-density crime clusters are concentrated in specific districts
+* Evening and late-night hours show peak crime activity
+* **DBSCAN** identified dense hotspots missed by K-Means
+* Spatial features (location, district) are dominant contributors
+* PCA retained **~74% variance** with just 7 components
 
 ---
 
 ## 📊 Dataset Information
 
-**Source:** Chicago Data Portal – Crimes 2001 to Present (Public Dataset)
+* **Source:** Chicago Data Portal – Crimes 2001 to Present
+* **Total Records Available:** 7.8 Million
+* **Sample Used:** ~500,000 records
+* **Features:** 22 features
+* **Crime Categories:** 33 types
+* **Coverage:** Chicago districts and wards
 
-* Dataset Scale: 7.8 million records (2001–2025)
-* Sample Used: ~500,000 records
-* Features: 22 variables
-* Crime Categories: 33 types
-* Coverage: Chicago districts and wards
-
-**Time Range Used in Project:**
+### ⏳ Time Range Used
 
 * Start Date: 2023-04-09
 * End Date: 2025-03-15
@@ -35,50 +60,28 @@ This project presents an end-to-end data science pipeline for analyzing crime pa
 
 ## 📂 Dataset Access
 
-Due to GitHub size limitations, large datasets are hosted on Google Drive:
+Due to GitHub size limits, datasets are hosted externally:
 
-* chicago_crime_with_features.csv → https://drive.google.com/file/d/1WWs8zcQtV6AdKJrISgBk228qvI_pgarJ/view?usp=sharing
-* clustering_results.csv → https://drive.google.com/file/d/1X7ckBqZO304JiBFpsFJkiukT9g1zFwiA/view?usp=sharing
-* crime_dbscan_clustered.csv → https://drive.google.com/file/d/1nFJu7Sl_iSLACyai22BfE66LoG9-YJrw/view?usp=sharing
+* chicago_crime_with_features.csv
+  https://drive.google.com/file/d/1WWs8zcQtV6AdKJrISgBk228qvI_pgarJ/view?usp=sharing
 
----
+* clustering_results.csv
+  https://drive.google.com/file/d/1X7ckBqZO304JiBFpsFJkiukT9g1zFwiA/view?usp=sharing
 
-## ⚙️ How to Run the Project
-
-### 🔹 Option 1: Quick Start (Recommended)
-
-1. Download datasets from the links above
-2. Place them inside the `Data/` folder
-3. Run the app:
-
-   ```bash
-   streamlit run app.py
-   ```
-
----
-
-### 🔹 Option 2: Reproduce Full Pipeline
-
-Run notebooks in order:
-
-1. `data_cleaning.ipynb`
-2. `eda.ipynb`
-3. `feature_eng.ipynb`
-4. `temporal_cluster.ipynb`
-5. `mlflow_tracking.ipynb`
-6. Run `app.py`
+* crime_dbscan_clustered.csv
+  https://drive.google.com/file/d/1nFJu7Sl_iSLACyai22BfE66LoG9-YJrw/view?usp=sharing
 
 ---
 
 ## 🧠 Machine Learning Techniques
 
-### Clustering Models
+### 🔹 Clustering
 
-* KMeans Clustering
+* K-Means Clustering
 * DBSCAN
 * Hierarchical Clustering
 
-### Dimensionality Reduction
+### 🔹 Dimensionality Reduction
 
 * PCA (Principal Component Analysis)
 * t-SNE
@@ -90,17 +93,42 @@ Run notebooks in order:
 MLflow is used to:
 
 * Track experiments
-* Compare model performance
-* Store parameters and metrics
+* Compare clustering performance
+* Store parameters and evaluation metrics
 
 ---
 
 ## 🖥️ Streamlit Application Features
 
-* Interactive crime analysis dashboard
-* Cluster visualization
-* PCA and t-SNE visualizations
-* User-friendly interface
+* 📊 Interactive crime analytics dashboard
+* 🗺️ Geographic crime visualization
+* ⏰ Temporal pattern analysis
+* 🔍 Clustering comparison (KMeans vs DBSCAN)
+* 🧠 PCA & t-SNE visualizations
+* 🎛️ Dynamic filters (year, district, crime type)
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* Pandas, NumPy
+* Scikit-learn
+* MLflow
+* Streamlit
+* Matplotlib / Seaborn
+
+---
+
+## ⚙️ Run Locally
+
+1. Download datasets from the links above
+2. Place them inside the `Data/` folder
+3. Run the application:
+
+```bash
+streamlit run app.py
+```
 
 ---
 
@@ -113,7 +141,6 @@ CHICAGO_PATROLQ_PROJECT/
 ├── mlruns/
 ├── app.py
 ├── requirements.txt
-├── model_metadata.json
 ├── Project_documentation.pdf
 └── README.md
 ```
@@ -122,26 +149,33 @@ CHICAGO_PATROLQ_PROJECT/
 
 ## ⚠️ Important Notes
 
-* Large datasets are not included in the repository due to size limits
-* Please download required files before running the app
-* MLflow tracking data is included for experiment reference
+* Large datasets are not included due to GitHub size limits
+* Ensure datasets are downloaded before running locally
+* MLflow logs are included for experiment reference
 
 ---
 
 ## 🚀 Deployment
 
-The application is designed to be deployed on Streamlit Cloud with automatic updates via GitHub integration.
+This application is deployed on **Streamlit Cloud** with GitHub integration for continuous updates.
+
+👉 https://chicago-crime-analysis-jatjuq9fu8kdjydgr2qkmh.streamlit.app/
 
 ---
 
 ## 📌 Conclusion
 
-This project demonstrates a complete data science workflow from raw data processing to model deployment, combining machine learning, experiment tracking, and interactive visualization.
+This project demonstrates a **complete end-to-end data science workflow**:
+from data preprocessing → feature engineering → clustering → experiment tracking → deployment.
+
+It combines machine learning with interactive visualization to generate **actionable insights for public safety analysis**.
 
 ---
 
 ## 👤 Author
 
 **Rama Sekar**
+
+Aspiring Data Scientist | Python | Machine Learning | Streamlit
 
 ---
