@@ -235,10 +235,6 @@ with st.sidebar:
     
     st.markdown("---")
     
-    # Apply filters button
-    if st.button("🔄 Reset Filters"):
-        st.rerun()
-    
     st.markdown("---")
     st.caption("Data Source: City of Chicago Data Portal")
 
