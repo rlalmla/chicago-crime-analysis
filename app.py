@@ -922,7 +922,6 @@ st.markdown("""
         <p style='font-size: 0.9rem;'>Data Source: City of Chicago Data Portal | Updated Regularly</p>
     </div>
 """, unsafe_allow_html=True)
-
 with tab6:
     st.header("📉 Dimensionality Reduction Analysis")
 
@@ -930,26 +929,85 @@ with tab6:
 
     st.write("""
         - PCA (Principal Component Analysis) was used to reduce high-dimensional crime features
-        - Original features were aggregated using domain knowledge (27 → 9 meaningful features)
-        - PCA further reduced features to 7 components while retaining 73.9% variance
+        - Feature engineering resulted in 16 input features
+        - Two PCA configurations were evaluated:
+            • 3 components → ~82% variance (best variance model)
+            • 2 components → ~75% variance (selected for application)
+        - Final model uses 2 components to satisfy 2D visualization requirement
         - t-SNE was applied to visualize complex crime patterns in 2D space
-        """)
-    
-    col1, col2 = st.columns(2)
+    """)
+
+    st.markdown("### ⭐ Selected Model (Used in Application)")
+
+    col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.metric("PCA Components", "7")
+        st.metric("PCA Components", "2")
 
     with col2:
-        st.metric("Variance Retained", "73.9%")
-    
+        st.metric("Variance Retained", "75.01%")
+
+    with col3:
+        st.metric("Feature Reduction", "16 → 2")
+
+    st.success("""
+    ✔ This model is used in the application as it enables clear 2D visualization 
+    while retaining most of the important variance.
+    """)
+
+    st.markdown("### 🏆 Best Variance Model (MLflow Result)")
+
+    col4, col5 = st.columns(2)
+
+    with col4:
+        st.metric("Components", "3")
+
+    with col5:
+        st.metric("Variance", "82.22%")
+
+    st.info("""
+    ℹ Although 3 components provide higher variance retention, 
+    2 components were selected based on project requirement for 2D visualization.
+    """)
+
     st.markdown("### 📊 PCA Insights")
+
     st.write("""
-        - The scree plot shows diminishing variance contribution after initial components
-        - 7 components capture over 70% of total variance
-        - Most important features include spatial and location-based attributes
-        """)
+        - Two principal components capture the majority of meaningful variance (~75%)
+        - Clear cluster separation observed in reduced space
+        - Minimal overlap indicates strong feature engineering
+        - Supports effectiveness of clustering algorithms (KMeans & DBSCAN)
+    """)
+
     st.markdown("### 🧠 t-SNE Visualization")
 
-    st.image("Data/tsne_crime_types.png",
-         caption="t-SNE Visualization showing clustering patterns across different crime types")
+    import os
+    if os.path.exists("Data/tsne_crime_types.png"):
+        st.image(
+            "Data/tsne_crime_types.png",
+            caption="t-SNE Visualization showing clustering patterns across different crime types"
+        )
+    else:
+        st.warning("t-SNE visualization image not found.")
+    
+    st.markdown("### 📊 PCA Visualization Insights")
+
+    st.info("📊 PCA visualizations are generated using a sample of 10,000 records for performance optimization.")
+
+    st.image(
+        "Data/pca_crime_type.png",
+        caption="PCA Visualization by Crime Type",
+        use_container_width=True
+    )
+
+    st.image(
+        "Data/pca_district.png",
+        caption="PCA Visualization by District",
+        use_container_width=True
+    )
+
+    st.image(
+        "Data/pca_hour.png",
+        caption="PCA Visualization by Hour of Day",
+        use_container_width=True
+    )
