@@ -850,21 +850,36 @@ with tab5:
     with col2:
         st.subheader("💡 Recommendations")
         
-        st.markdown("""
-        <div class="info-box">
-        <b>Strategic Recommendations:</b><br><br>
-        ✅ Increase patrol during peak hours<br>
-        ✅ Focus resources on high-crime districts<br>
-        ✅ Implement community programs in hotspots<br>
-        ✅ Enhance surveillance in cluster centers<br>
-        ✅ Deploy predictive policing strategies
-        </div>
-        """, unsafe_allow_html=True)
+        st.markdown("### 💡 Recommendations")
+
+        st.write("""
+            - Increase patrol deployment between identified peak hours
+            - Allocate more officers to consistently high-crime districts
+            - Monitor high-density clusters identified by DBSCAN
+            - Prioritize surveillance in recurring hotspot zones
+            - Focus preventive action on frequently occurring crime types
+            """)
     
     # Data quality
     st.markdown("---")
+    st.markdown("### 📌 Key Takeaways")
+
+    st.write("""
+        - Crime activity peaks during specific evening hours indicating high-risk periods
+        - Certain districts consistently show higher crime concentration
+        - Clustering reveals crime is not uniformly distributed but forms hotspots
+        - Temporal patterns suggest predictable crime behavior trends
+        """)    
+  
+    st.markdown("### 🚔 Real-World Impact")
+
+    st.write("""
+        - Improves response time in high-risk areas
+        - Reduces crime through proactive monitoring
+        - Enables efficient allocation of limited police resources
+        - Supports data-driven decision making in law enforcement
+        """)
     st.subheader("📋 Data Quality Metrics")
-    
     col1, col2, col3, col4 = st.columns(4)
     
     missing_lat = df_filtered['Latitude'].isna().sum() if 'Latitude' in df_filtered.columns else 0
